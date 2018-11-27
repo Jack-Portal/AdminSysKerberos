@@ -6,10 +6,7 @@ apt install krb5-kdc krb5-admin-server
 
 echo "kerberos" | krb5_newrealm
 
-kadmin.local
-# kerberos/admin
-# 2 * MDP
-# quit
+echo "add princ kerberos/admin" | kadmin.local
 
 
 systemctl restart krb5-admin-server.service
