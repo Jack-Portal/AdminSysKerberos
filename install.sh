@@ -1,7 +1,8 @@
 #!/bin/bash
 
 add-apt-repository universe
-apt-get update && apt-get -y upgrade
+
+apt-get update -y && apt-get upgrade -y
 apt install krb5-kdc krb5-admin-server -y
 
 krb5_newrealm
@@ -17,4 +18,6 @@ kadmin.local
 
 systemctl restart krb5-admin-server.service
 
+echo " "
 echo "The installation is finished !"
+echo " "
